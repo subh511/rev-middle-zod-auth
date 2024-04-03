@@ -6,6 +6,16 @@ const app = express();
 
 const schema = zod.array(zod.number())
 
+/**
+ * zod schema;
+ * 
+ * const schema = zod.object({
+ * email:zod.string(),
+ * password:zod.string(),
+ * country:zod.literal("IN").or(zod.literal("US")),
+ * kidneys:zod.array(zod.numbers())
+ * })
+ */
 app.use(express.json())
 
 app.post("/",function(req,res){
